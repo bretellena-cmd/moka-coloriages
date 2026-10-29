@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mes coloriages · Moka Coloriages</title>
+<meta name="description" content="Votre espace famille : bibliothèque, album, envies des enfants et factures.">
+<meta name="theme-color" content="#FFD23F">
+<meta property="og:title" content="Mes coloriages · Moka Coloriages">
+<meta property="og:description" content="Votre espace famille : bibliothèque, album, envies des enfants et factures.">
+<meta property="og:image" content="assets/img/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/moka.css">
+<script src="assets/js/config.js" defer></script><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="compte">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="header"><div class="wrap header-in">
+  <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Moka Coloriages, accueil" width="446" height="111"></a>
+  <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="coloriages.html">Les coloriages</a><a href="monde-de-moka.html">Le monde de Moka</a><a href="coloriage-offert.html">Coloriage offert</a></nav>
+  <div class="header-actions">
+    <button class="btn-rond burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg></button>
+    <a class="btn-rond" href="connexion.html" data-lien-compte aria-label="Mon compte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.6 4-5.4 7.5-5.4s6.3 1.8 7.5 5.4"/></svg></a>
+    <a class="btn-rond" href="paiement.html" aria-label="Mon panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11z"/><path d="M9 10V7a3 3 0 016 0v3" stroke-linecap="round"/></svg><span class="pastille-compteur" data-compteur-panier hidden>0</span></a>
+    <a class="btn-enfant" href="mode-enfant.html"><img src="assets/img/moka-icone.svg" alt="" width="40" height="40"><span>Mode enfant</span></a>
+  </div></div></header>
+<main id="contenu">
+
+<div class="wrap section" id="compte" hidden>
+  <div class="between">
+    <div><h1 id="bonjour">Bonjour !</h1><div class="row mt-16" id="enfants"></div></div>
+    <div class="chiffres"><div class="chiffre"><span class="small douce">Packs</span><strong id="c-packs">0</strong></div><div class="chiffre"><span class="small douce">Planches</span><strong id="c-planches">0</strong></div><div class="chiffre"><span class="small douce">Univers</span><strong id="c-univers">0/8</strong></div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:start" class="mt-32 compte-grid">
+    <div>
+      <div class="onglets" id="onglets" role="tablist" aria-label="Mes coloriages"></div>
+      <div class="boite mt-24" id="onglet-corps" role="tabpanel"></div>
+    </div>
+    <aside>
+      <div class="boite"><h2 class="h4">Astuces d'impression</h2>
+        <p class="small mt-16"><strong>Échelle 100 %.</strong> Évitez « Ajuster à la page ».</p>
+        <p class="small mt-8"><strong>Noir et blanc.</strong> Le mode brouillon suffit.</p>
+        <p class="small mt-8"><strong>Papier.</strong> 80–90 g pour les crayons, 120–160 g pour les feutres.</p></div>
+      <div class="boite mt-16 bg-espace"><h2 class="h4">Où part Moka le mois prochain ?</h2><p class="small mt-8">Votez pour la prochaine aventure : le pack gagnant sort le mois prochain.</p><div id="vote" class="mt-8"></div></div>
+      <button class="btn btn-sec btn-bloc mt-16" type="button" id="deconnexion">Se déconnecter</button>
+    </aside>
+  </div>
+</div>
+<style>@media (max-width:960px){.compte-grid{grid-template-columns:1fr !important}}</style>
+</main>
+<footer class="footer"><div class="wrap">
+  <div class="footer-grid">
+    <div><img src="assets/img/logo-blanc.png" alt="Moka" width="446" height="111"><p class="small">Des aventures à colorier pour les 2 à 8 ans.</p></div>
+    <div><h4>Découvrir</h4><ul><li><a href="coloriages.html">Les coloriages</a></li><li><a href="monde-de-moka.html">Le monde de Moka</a></li><li><a href="coloriage-offert.html">Coloriage offert</a></li><li><a href="mode-enfant.html">Mode enfant</a></li></ul></div>
+    <div><h4>Aide</h4><ul><li><a href="faq.html">Questions fréquentes</a></li><li><a href="contact.html">Nous contacter</a></li><li><a href="mon-compte.html" data-lien-compte>Mon compte</a></li></ul></div>
+    <div><h4>Infos</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales de vente</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
+  </div>
+  <div class="footer-bas">© <span data-annee>2026</span> Moka Coloriages · Sans publicité ni traceur.</div>
+</div></footer>
+</body>
+</html>

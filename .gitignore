@@ -1,0 +1,8 @@
+node_modules/
+.vercel/
+.env
+.env.local
+.DS_Store
+
+# PDF payants : ils vont dans le stockage privé Supabase, jamais sur GitHub
+pdf-prives/

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mode enfant · Moka Coloriages</title>
+<meta name="description" content="Le mode enfant de Moka : l&#x27;enfant choisit ses packs de coloriages, un parent confirme avant de payer.">
+<meta name="theme-color" content="#FFD23F">
+<meta property="og:title" content="Mode enfant · Moka Coloriages">
+<meta property="og:description" content="Le mode enfant de Moka : l&#x27;enfant choisit ses packs de coloriages, un parent confirme avant de payer.">
+<meta property="og:image" content="assets/img/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/moka.css">
+<script src="assets/js/config.js" defer></script><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script><script src="assets/js/enfant.js" defer></script>
+</head>
+<body data-page="enfant">
+
+<main id="contenu">
+<div class="enfant">
+  <header class="enfant-header">
+    <button class="btn-64" type="button" data-retour aria-label="Retour"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span class="logo"><img src="assets/img/logo.png" alt="Moka"></span>
+    <button class="btn-64 jaune" type="button" data-liste aria-label="Ma liste"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11z"/><path d="M9 10V7a3 3 0 016 0v3" stroke-linecap="round"/></svg><span class="pastille-compteur" id="compteur-liste" hidden>0</span></button>
+  </header>
+  <div class="enfant-scene" id="scene" aria-live="polite"></div>
+</div>
+</main>
+
+</body>
+</html>

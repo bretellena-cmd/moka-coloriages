@@ -1,0 +1,16 @@
+{
+  "name": "moka-coloriages",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Moka Coloriages — boutique de coloriages PDF à imprimer (site statique + fonctions Vercel).",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "local": "npx --yes serve ."
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "stripe": "^16.12.0"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les coloriages · Moka Coloriages</title>
+<meta name="description" content="Tous les cahiers de coloriages Moka à imprimer : montagne, plage, forêt, ferme, école, Noël, espace, docteur. Filtrez par âge, univers et format.">
+<meta name="theme-color" content="#FFD23F">
+<meta property="og:title" content="Les coloriages · Moka Coloriages">
+<meta property="og:description" content="Tous les cahiers de coloriages Moka à imprimer : montagne, plage, forêt, ferme, école, Noël, espace, docteur. Filtrez par âge, univers et format.">
+<meta property="og:image" content="assets/img/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/moka.css">
+<script src="assets/js/config.js" defer></script><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="coloriages">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="header"><div class="wrap header-in">
+  <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Moka Coloriages, accueil" width="446" height="111"></a>
+  <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="coloriages.html" aria-current="page">Les coloriages</a><a href="monde-de-moka.html">Le monde de Moka</a><a href="coloriage-offert.html">Coloriage offert</a></nav>
+  <div class="header-actions">
+    <button class="btn-rond burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg></button>
+    <a class="btn-rond" href="connexion.html" data-lien-compte aria-label="Mon compte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.6 4-5.4 7.5-5.4s6.3 1.8 7.5 5.4"/></svg></a>
+    <a class="btn-rond" href="paiement.html" aria-label="Mon panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11z"/><path d="M9 10V7a3 3 0 016 0v3" stroke-linecap="round"/></svg><span class="pastille-compteur" data-compteur-panier hidden>0</span></a>
+    <a class="btn-enfant" href="mode-enfant.html"><img src="assets/img/moka-icone.svg" alt="" width="40" height="40"><span>Mode enfant</span></a>
+  </div></div></header>
+<main id="contenu">
+
+<div class="wrap">
+  <nav class="ariane" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> / Les coloriages</nav>
+  <div class="row" style="align-items:baseline"><h1>Tous les coloriages</h1><span class="douce" style="font-weight:700" id="nb-cahiers" aria-live="polite">9 cahiers</span></div>
+  <div class="row mt-24" role="group" aria-label="Idées">
+    <button class="raccourci bg-ecole" type="button" data-f="tag" data-v="rentree" aria-pressed="false">Spécial rentrée</button>
+    <button class="raccourci bg-montagne" type="button" data-f="tag" data-v="pluie" aria-pressed="false">Jour de pluie</button>
+    <button class="raccourci bg-plage" type="button" data-f="tag" data-v="tout-petits" aria-pressed="false">Pour les tout-petits</button>
+  </div>
+  <div class="filtres mt-24">
+    <div class="filtres-ligne"><span>Âge</span><div class="row">
+      <button class="filtre" type="button" data-f="age" data-v="2-4" aria-pressed="false">2–4 ans</button>
+      <button class="filtre" type="button" data-f="age" data-v="4-6" aria-pressed="false">4–6 ans</button>
+      <button class="filtre" type="button" data-f="age" data-v="6-8" aria-pressed="false">6–8 ans</button></div></div>
+    <div class="filtres-ligne"><span>Univers</span><div class="row"><button class="filtre" type="button" data-f="univers" data-v="montagne" aria-pressed="false"><span class="point" style="background:var(--montagne)"></span>montagne</button><button class="filtre" type="button" data-f="univers" data-v="plage" aria-pressed="false"><span class="point" style="background:var(--plage)"></span>plage</button><button class="filtre" type="button" data-f="univers" data-v="foret" aria-pressed="false"><span class="point" style="background:var(--foret)"></span>forêt</button><button class="filtre" type="button" data-f="univers" data-v="ferme" aria-pressed="false"><span class="point" style="background:var(--ferme)"></span>ferme</button><button class="filtre" type="button" data-f="univers" data-v="ecole" aria-pressed="false"><span class="point" style="background:var(--ecole)"></span>école</button><button class="filtre" type="button" data-f="univers" data-v="noel" aria-pressed="false"><span class="point" style="background:var(--noel)"></span>Noël</button><button class="filtre" type="button" data-f="univers" data-v="espace" aria-pressed="false"><span class="point" style="background:var(--espace)"></span>espace</button><button class="filtre" type="button" data-f="univers" data-v="docteur" aria-pressed="false"><span class="point" style="background:var(--docteur)"></span>docteur</button></div></div>
+    <div class="filtres-ligne"><span>Format</span><div class="row">
+      <button class="filtre" type="button" data-f="format" data-v="pack" aria-pressed="false">Pack</button>
+      <button class="filtre" type="button" data-f="format" data-v="unite" aria-pressed="false">À l'unité</button>
+      <button class="filtre" type="button" data-f="format" data-v="coffret" aria-pressed="false">Coffret</button></div></div>
+  </div>
+  <div class="grid-4 mt-32" id="catalogue"><article class="carte-pack " data-age="2-4" data-ages="2-4" data-univers="montagne" data-format="pack" data-tags="tout-petits">
+  <div style="position:relative"><a class="carte" style="--couleur:var(--montagne)" href="pack-montagne.html">
+    <span class="carte-img" style="display:block"><img src="assets/coloriages/montagne-randonnee.png" alt="" loading="lazy"><span class="pastille">2–4 ans</span></span>
+    <h2 class="carte-nom">Moka à la montagne</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 6 planches</span></span>
+  </a><button class="envie" type="button" data-envie="montagne" aria-pressed="false" aria-label="Ajouter Moka à la montagne à mes envies" style="top:20px;right:20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0112 7.6 4.2 4.2 0 0119.5 10c0 5.4-7.5 10-7.5 10z"/></svg></button></div>
+  <div class="carte-achat"><span class="prix">1,99 €</span><button class="btn btn-s" type="button" data-ajouter="montagne" aria-pressed="false">Ajouter au panier</button></div>
+</article><article class="carte-pack " data-age="2-4" data-ages="2-4" data-univers="plage" data-format="pack" data-tags="tout-petits">
+  <div style="position:relative"><a class="carte" style="--couleur:var(--plage)" href="pack-plage.html">
+    <span class="carte-img" style="display:block"><img src="assets/coloriages/plage-chateau.png" alt="" loading="lazy"><span class="pastille">2–4 ans</span></span>
+    <h2 class="carte-nom">Moka à la plage</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 6 planches</span></span>
+  </a><button class="envie" type="button" data-envie="plage" aria-pressed="false" aria-label="Ajouter Moka à la plage à mes envies" style="top:20px;right:20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0112 7.6 4.2 4.2 0 0119.5 10c0 5.4-7.5 10-7.5 10z"/></svg></button></div>
+  <div class="carte-achat"><span class="prix">1,99 €</span><button class="btn btn-s" type="button" data-ajouter="plage" aria-pressed="false">Ajouter au panier</button></div>
+</article><article class="carte-pack " data-age="2-4" data-ages="2-4" data-univers="foret" data-format="pack" data-tags="pluie tout-petits">
+  <div style="position:relative"><a class="carte" style="--couleur:var(--foret)" href="pack-foret.html">
+    <span class="carte-img" style="display:block"><img src="assets/coloriages/foret-balade.png" alt="" loading="lazy"><span class="pastille">2–4 ans</span><span class="pastille pastille-orange carte-badge">Nouveau</span></span>
+    <h2 class="carte-nom">Moka à la forêt</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 5 planches</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="9.6" cy="5.5" rx="1.6" ry="4"/><ellipse cx="14.4" cy="5.5" rx="1.6" ry="4"/><circle cx="12" cy="12" r="3.6"/><ellipse cx="12" cy="18.8" rx="4.4" ry="3.4"/></svg> doudou caché</span></span>
+  </a></div>
+  <div class="carte-achat"><span class="prix">1,99 €</span><button class="btn btn-s" type="button" data-ajouter="foret" aria-pressed="false">Ajouter au panier</button></div>
+</article><article class="carte-pack " data-age="4-6" data-ages="4-6" data-univers="ferme" data-format="pack" data-tags="pluie">
+  <div style="position:relative"><a class="carte" style="--couleur:var(--ferme)" href="pack-ferme.html">
+    <span class="carte-img" style="display:block"><img src="assets/coloriages/ferme-poules.png" alt="" loading="lazy"><span class="pastille">4–6 ans</span></span>
+    <h2 class="carte-nom">Moka à la ferme</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 5 planches</span></span>
+  </a><button class="envie" type="button" data-envie="ferme" aria-pressed="false" aria-label="Ajouter Moka à la ferme à mes envies" style="top:20px;right:20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0112 7.6 4.2 4.2 0 0119.5 10c0 5.4-7.5 10-7.5 10z"/></svg></button></div>
+  <div class="carte-achat"><span class="prix">1,99 €</span><button class="btn btn-s" type="button" data-ajouter="ferme" aria-pressed="false">Ajouter au panier</button></div>
+</article><article class="carte-pack " data-age="2-4" data-ages="2-4" data-univers="ecole" data-format="pack" data-tags="rentree tout-petits">
+  <div style="position:relative"><a class="carte" style="--couleur:var(--ecole)" href="pack-ecole.html">
+    <span class="carte-img" style="display:block"><img src="assets/coloriages/ecole-pupitre.png" alt="" loading="lazy"><span class="pastille">2–4 ans</span><span class="pastille pastille-orange carte-badge">Rentrée</span></span>
+    <h2 class="carte-nom">Moka va à l&#x27;école</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 5 planches</span></span>
+  </a></div>
+  <div class="carte-achat"><span class="prix">1,99 €</span><button class="btn btn-s" type="button" data-ajouter="ecole" aria-pressed="false">Ajouter au panier</button></div>
+</article><article class="carte-pack " data-age="4-6" data-ages="4-6" data-univers="noel" data-format="pack" data-tags="">
+  <div style="position:relative"><a class="carte" style="--couleur:var(--noel)" href="pack-noel.html">
+    <span class="carte-img" style="display:block"><img src="assets/coloriages/noel-sapin.png" alt="" loading="lazy"><span class="pastille">4–6 ans</span><span class="pastille pastille-orange carte-badge">Édition hiver</span></span>
+    <h2 class="carte-nom">Moka fête Noël</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 5 planches</span></span>
+  </a></div>
+  <div class="carte-achat"><span class="prix">1,99 €</span><button class="btn btn-s" type="button" data-ajouter="noel" aria-pressed="false">Ajouter au panier</button></div>
+</article><article class="carte-pack " data-age="6-8" data-ages="6-8" data-univers="espace" data-format="pack" data-tags="pluie">
+  <div style="position:relative"><a class="carte" style="--couleur:var(--espace)" href="pack-espace.html">
+    <span class="carte-img" style="display:block"><img src="assets/coloriages/espace-astronaute.png" alt="" loading="lazy"><span class="pastille">6–8 ans</span></span>
+    <h2 class="carte-nom">Moka dans l&#x27;espace</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 5 planches</span></span>
+  </a><button class="envie" type="button" data-envie="espace" aria-pressed="false" aria-label="Ajouter Moka dans l&#x27;espace à mes envies" style="top:20px;right:20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0112 7.6 4.2 4.2 0 0119.5 10c0 5.4-7.5 10-7.5 10z"/></svg></button></div>
+  <div class="carte-achat"><span class="prix">1,99 €</span><button class="btn btn-s" type="button" data-ajouter="espace" aria-pressed="false">Ajouter au panier</button></div>
+</article><article class="carte-pack " data-age="2-4" data-ages="2-4" data-univers="docteur" data-format="unite" data-tags="tout-petits">
+  <div style="position:relative"><a class="carte" style="--couleur:var(--docteur)" href="pack-docteur.html">
+    <span class="carte-img" style="display:block"><img src="assets/coloriages/docteur-visite.png" alt="" loading="lazy"><span class="pastille">2–4 ans</span></span>
+    <h2 class="carte-nom">Moka chez le docteur</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 1 planche</span></span>
+  </a><button class="envie" type="button" data-envie="docteur" aria-pressed="false" aria-label="Ajouter Moka chez le docteur à mes envies" style="top:20px;right:20px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0112 7.6 4.2 4.2 0 0119.5 10c0 5.4-7.5 10-7.5 10z"/></svg></button></div>
+  <div class="carte-achat"><span class="prix">1,50 €</span><button class="btn btn-s" type="button" data-ajouter="docteur" aria-pressed="false">Ajouter au panier</button></div>
+</article><article class="carte-pack " data-age="4-8" data-ages="4-6 6-8" data-univers="coffret" data-format="coffret" data-tags="">
+  <div style="position:relative"><a class="carte carte-coffret" style="--couleur:var(--coffret)" href="pack-coffret.html">
+    <span class="carte-img" style="display:block"><img src="assets/img/moka-coffret.png" alt="" loading="lazy"><span class="pastille">4–8 ans</span><span class="pastille pastille-orange carte-badge">-24 %</span></span>
+    <h2 class="carte-nom">Le Tour du Monde de Moka</h2>
+    <span class="carte-infos"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.6L15.8 4.8a2 2 0 012.8 0l.6.6a2 2 0 010 2.8L8.6 18.8z"/></svg> 24 planches</span><span>+ jeux bonus</span></span>
+  </a></div>
+  <div class="carte-achat"><span class="prix">5,90 €<span class="prix-barre">7,96 €</span></span><button class="btn btn-s" type="button" data-ajouter="coffret" aria-pressed="false">Ajouter au panier</button></div>
+</article></div>
+  <div class="vide-resultat" id="aucun" hidden><img src="assets/img/moka-coucou.png" alt="" style="width:120px;margin:0 auto 16px"><p class="h3">Aucun cahier avec ces filtres.</p><button class="btn btn-sec mt-16" type="button" id="reinit">Tout afficher</button></div>
+</div>
+<div class="section"></div>
+</main>
+<footer class="footer"><div class="wrap">
+  <div class="footer-grid">
+    <div><img src="assets/img/logo-blanc.png" alt="Moka" width="446" height="111"><p class="small">Des aventures à colorier pour les 2 à 8 ans.</p></div>
+    <div><h4>Découvrir</h4><ul><li><a href="coloriages.html">Les coloriages</a></li><li><a href="monde-de-moka.html">Le monde de Moka</a></li><li><a href="coloriage-offert.html">Coloriage offert</a></li><li><a href="mode-enfant.html">Mode enfant</a></li></ul></div>
+    <div><h4>Aide</h4><ul><li><a href="faq.html">Questions fréquentes</a></li><li><a href="contact.html">Nous contacter</a></li><li><a href="mon-compte.html" data-lien-compte>Mon compte</a></li></ul></div>
+    <div><h4>Infos</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales de vente</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
+  </div>
+  <div class="footer-bas">© <span data-annee>2026</span> Moka Coloriages · Sans publicité ni traceur.</div>
+</div></footer>
+</body>
+</html>

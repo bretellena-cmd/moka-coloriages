@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coloriage offert · Moka Coloriages</title>
+<meta name="description" content="Recevez gratuitement « La randonnée de Moka », un vrai coloriage à imprimer, pour découvrir Moka.">
+<meta name="theme-color" content="#FFD23F">
+<meta property="og:title" content="Coloriage offert · Moka Coloriages">
+<meta property="og:description" content="Recevez gratuitement « La randonnée de Moka », un vrai coloriage à imprimer, pour découvrir Moka.">
+<meta property="og:image" content="assets/img/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/moka.css">
+<script src="assets/js/config.js" defer></script><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="offert">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="header"><div class="wrap header-in">
+  <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Moka Coloriages, accueil" width="446" height="111"></a>
+  <nav class="nav" id="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="coloriages.html">Les coloriages</a><a href="monde-de-moka.html">Le monde de Moka</a><a href="coloriage-offert.html" aria-current="page">Coloriage offert</a></nav>
+  <div class="header-actions">
+    <button class="btn-rond burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg></button>
+    <a class="btn-rond" href="connexion.html" data-lien-compte aria-label="Mon compte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.6 4-5.4 7.5-5.4s6.3 1.8 7.5 5.4"/></svg></a>
+    <a class="btn-rond" href="paiement.html" aria-label="Mon panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8h13l-1 12h-11z"/><path d="M9 10V7a3 3 0 016 0v3" stroke-linecap="round"/></svg><span class="pastille-compteur" data-compteur-panier hidden>0</span></a>
+    <a class="btn-enfant" href="mode-enfant.html"><img src="assets/img/moka-icone.svg" alt="" width="40" height="40"><span>Mode enfant</span></a>
+  </div></div></header>
+<main id="contenu">
+
+<section class="bg-montagne" style="padding:64px 0 80px"><div class="wrap duo">
+  <div style="position:relative;max-width:420px;margin:0 auto;width:100%;aspect-ratio:.85">
+    <div style="position:absolute;inset:6% 14% 0 4%;background:#fff;border:2px solid var(--encre);border-radius:14px;transform:rotate(-9deg)"></div>
+    <div style="position:absolute;inset:3% 8% 3% 8%;background:#fff;border:2px solid var(--encre);border-radius:14px;transform:rotate(-4deg)"></div>
+    <div style="position:absolute;inset:0 4% 6% 14%;background:#fff;border:2px solid var(--encre);border-radius:14px;padding:12px;transform:rotate(2deg)"><img src="assets/coloriages/montagne-randonnee.png" alt="Aperçu du coloriage offert : la randonnée de Moka" style="width:100%;height:100%;object-fit:contain"></div>
+    <span class="bg-plage" style="position:absolute;right:0;top:4%;width:96px;height:96px;border-radius:50%;border:2px solid var(--encre);display:grid;place-items:center;text-align:center;font-family:var(--titre);font-weight:700;transform:rotate(12deg);line-height:20px">C'est<br>gratuit</span>
+  </div>
+  <div>
+    <p class="label">Coloriage offert</p>
+    <h1 class="mt-8">La randonnée de Moka, offerte.</h1>
+    <p class="body-l mt-16">Un vrai coloriage de nos cahiers, à imprimer ce soir. Pour découvrir Moka avant de choisir un cahier.</p>
+    <div class="boite mt-24" style="max-width:480px"><form id="form-offert" data-succes="offert-ok" novalidate>
+  <label class="champ"><span>Votre email</span><input type="email" name="email" autocomplete="email" placeholder="prenom@exemple.fr" required></label>
+  <label class="coche mt-16"><input type="checkbox" name="consentement"><span>Je veux aussi recevoir les nouvelles aventures de Moka (une fois par mois, maximum).</span></label>
+  <p class="erreur" aria-live="polite"></p>
+  <button class="btn btn-bloc mt-16" type="submit">Recevoir mon coloriage</button>
+  <p class="small douce mt-16">Pas de spam, désinscription en un clic. <a href="confidentialite.html">Confidentialité</a></p>
+</form>
+<div id="offert-ok" hidden>
+  <h3>C'est parti !</h3>
+  <p class="mt-8">Votre coloriage est prêt. Le lien vous attend aussi dans votre boîte mail.</p>
+  <a class="btn btn-bloc mt-24" href="assets/pdf/coloriage-offert-la-randonnee.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg> Télécharger « La randonnée de Moka »</a>
+  <p class="small douce mt-16">Format A4, noir et blanc, échelle 100 %.</p>
+</div></div>
+  </div>
+</div></section>
+<section class="section"><div class="wrap">
+  <h2 class="titre-section">Comment ça marche</h2>
+  <div class="grid-3">
+    <div class="row" style="align-items:flex-start;flex-wrap:nowrap"><div class="num bg-montagne" style="flex:none">1</div><div><h3 class="h4">Laissez votre email</h3><p class="douce small">Une seule adresse, aucun mot de passe.</p></div></div>
+    <div class="row" style="align-items:flex-start;flex-wrap:nowrap"><div class="num bg-plage" style="flex:none">2</div><div><h3 class="h4">Téléchargez le PDF</h3><p class="douce small">Le lien arrive aussi dans votre boîte mail.</p></div></div>
+    <div class="row" style="align-items:flex-start;flex-wrap:nowrap"><div class="num bg-foret" style="flex:none">3</div><div><h3 class="h4">Imprimez, coloriez !</h3><p class="douce small">Format A4, en noir et blanc.</p></div></div>
+  </div>
+  <div class="bg-plage between mt-48" style="border-radius:24px;padding:28px 32px">
+    <div><h2 class="h3">Il a adoré ? La suite l'attend.</h2><p class="mt-8">Le cahier complet « Moka à la montagne » : 6 coloriages, 1,99 €.</p></div>
+    <a class="btn" href="pack-montagne.html">Voir le cahier</a>
+  </div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap">
+  <div class="footer-grid">
+    <div><img src="assets/img/logo-blanc.png" alt="Moka" width="446" height="111"><p class="small">Des aventures à colorier pour les 2 à 8 ans.</p></div>
+    <div><h4>Découvrir</h4><ul><li><a href="coloriages.html">Les coloriages</a></li><li><a href="monde-de-moka.html">Le monde de Moka</a></li><li><a href="coloriage-offert.html">Coloriage offert</a></li><li><a href="mode-enfant.html">Mode enfant</a></li></ul></div>
+    <div><h4>Aide</h4><ul><li><a href="faq.html">Questions fréquentes</a></li><li><a href="contact.html">Nous contacter</a></li><li><a href="mon-compte.html" data-lien-compte>Mon compte</a></li></ul></div>
+    <div><h4>Infos</h4><ul><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="cgv.html">Conditions générales de vente</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
+  </div>
+  <div class="footer-bas">© <span data-annee>2026</span> Moka Coloriages · Sans publicité ni traceur.</div>
+</div></footer>
+</body>
+</html>

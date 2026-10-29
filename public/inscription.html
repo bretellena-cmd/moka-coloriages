@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Créer un compte · Moka Coloriages</title>
+<meta name="description" content="Créez votre compte Moka Coloriages pour retrouver et retélécharger vos cahiers.">
+<meta name="theme-color" content="#FFD23F">
+<meta property="og:title" content="Créer un compte · Moka Coloriages">
+<meta property="og:description" content="Créez votre compte Moka Coloriages pour retrouver et retélécharger vos cahiers.">
+<meta property="og:image" content="assets/img/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/moka.css">
+<script src="assets/js/config.js" defer></script><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="inscription" style="background:var(--montagne)">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="header header-simple" style="background:transparent;border:0;position:static"><div class="wrap header-in">
+  <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Moka Coloriages, accueil" width="446" height="111"></a>
+  <div><a class="lien" href="connexion.html">J'ai déjà un compte</a></div></div></header>
+<main id="contenu">
+
+<div class="plein" style="min-height:calc(100vh - 92px)"><div class="wrap duo">
+  <div>
+    <section data-etape="1" class="carte-form">
+      <p class="small" style="font-weight:700">Étape <span data-num-etape>1</span> sur 3</p><div class="progression mt-8 mb-24"><i style="width:33%"></i></div>
+      <h1>Créez votre compte</h1><p class="douce small mb-24">Pour retrouver vos cahiers et les retélécharger quand vous voulez.</p>
+      <form id="f-compte" novalidate>
+        <label class="champ"><span>Votre prénom</span><input name="prenom" autocomplete="given-name" placeholder="Camille"></label>
+        <label class="champ"><span>Email</span><input type="email" name="email" autocomplete="email" placeholder="prenom@exemple.fr"></label>
+        <label class="champ"><span>Mot de passe</span><input type="password" name="mdp" autocomplete="new-password" minlength="8"><span class="aide">8 caractères minimum.</span></label>
+        <p class="erreur" aria-live="polite"></p>
+        <button class="btn btn-bloc mt-24" type="submit">Continuer</button>
+      </form>
+    </section>
+    <section data-etape="2" class="carte-form" hidden>
+      <p class="small" style="font-weight:700">Étape <span data-num-etape>2</span> sur 3</p><div class="progression mt-8 mb-24"><i style="width:66%"></i></div>
+      <h1>Pour qui ?</h1><p class="douce small mb-24">Pour vous suggérer les bons cahiers. Nous ne demandons ni prénom ni photo d'enfant.</p>
+      <form id="f-enfants" novalidate>
+        <span class="champ-label">Nombre d'enfants</span>
+        <div class="row"><button class="btn-rond" type="button" id="moins" aria-label="Un enfant de moins">–</button><strong id="nb-enfants" style="font-size:24px;min-width:24px;text-align:center" aria-live="polite">1</strong><button class="btn-rond" type="button" id="plus" aria-label="Un enfant de plus">+</button></div>
+        <span class="champ-label mt-24">Tranches d'âge</span>
+        <div class="row">
+          <label class="coche"><input type="checkbox" name="age" value="2-4"><span>2–4 ans</span></label>
+          <label class="coche"><input type="checkbox" name="age" value="4-6"><span>4–6 ans</span></label>
+          <label class="coche"><input type="checkbox" name="age" value="6-8"><span>6–8 ans</span></label>
+        </div>
+        <button class="btn btn-bloc mt-32" type="submit">Continuer</button>
+        <button class="btn btn-sec btn-bloc mt-8" type="button" id="passer">Passer cette étape</button>
+      </form>
+    </section>
+    <section data-etape="3" class="carte-form centre" hidden>
+      <p class="small" style="font-weight:700">Étape <span data-num-etape>3</span> sur 3</p><div class="progression mt-8 mb-24"><i style="width:100%"></i></div>
+      <h1>Bienvenue <span data-prenom></span> !</h1>
+      <p class="douce">Votre compte est prêt. « La randonnée de Moka » vous attend déjà dans vos coloriages.</p>
+      <div style="background:var(--montagne);border-radius:16px;padding:10px;max-width:200px;margin:24px auto"><img src="assets/coloriages/montagne-randonnee.png" alt="" style="background:#fff;border-radius:10px"></div>
+      <a class="btn btn-bloc" href="mon-compte.html">Voir mes coloriages</a>
+      <a class="btn btn-sec btn-bloc mt-8" href="coloriages.html">Découvrir les cahiers</a>
+    </section>
+  </div>
+  <div class="centre"><span class="bulle">Coucou ! Moi, c'est Moka.</span><img id="moka-bienvenue" src="assets/img/moka-coucou.png" alt="" style="max-width:300px;margin:16px auto 0"></div>
+</div></div>
+</main>
+
+</body>
+</html>

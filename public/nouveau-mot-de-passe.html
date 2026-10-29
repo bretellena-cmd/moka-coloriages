@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nouveau mot de passe · Moka Coloriages</title>
+<meta name="description" content="Choisissez un nouveau mot de passe pour votre compte Moka.">
+<meta name="theme-color" content="#FFD23F">
+<meta property="og:title" content="Nouveau mot de passe · Moka Coloriages">
+<meta property="og:description" content="Choisissez un nouveau mot de passe pour votre compte Moka.">
+<meta property="og:image" content="assets/img/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/moka.css">
+<script src="assets/js/config.js" defer></script><script src="assets/js/data.js" defer></script><script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="nouveauMdp" style="background:var(--rose)">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="header header-simple" style="background:transparent;border:0;position:static"><div class="wrap header-in">
+  <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="Moka Coloriages, accueil" width="446" height="111"></a>
+  <div><a class="lien" href="index.html">← Retour au site</a></div></div></header>
+<main id="contenu">
+<div class="plein" style="justify-content:center"><div class="wrap" style="display:flex;justify-content:center">
+      <div style="position:relative;width:100%;max-width:460px;padding-top:146px">
+        <img src="assets/img/moka-tete-connexion.png" alt="" width="859" height="792" style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:170px;height:auto;z-index:0">
+        <div class="carte-form" style="z-index:1">
+  <form id="f-mdp" novalidate>
+    <h1>Nouveau mot de passe</h1>
+    <label class="champ"><span>Nouveau mot de passe</span><input type="password" name="mdp" autocomplete="new-password"><span class="aide">8 caractères minimum.</span></label>
+    <label class="champ"><span>Confirmez-le</span><input type="password" name="mdp2" autocomplete="new-password"></label>
+    <p class="erreur" aria-live="polite"></p>
+    <button class="btn btn-bloc mt-24" type="submit">Enregistrer</button>
+  </form>
+  <div id="mdp-ok" class="centre" hidden>
+    <h1>C'est enregistré !</h1><p class="douce">Votre nouveau mot de passe est actif.</p>
+    <a class="btn btn-bloc mt-24" href="mon-compte.html">Mes coloriages</a>
+  </div></div>
+      </div></div></div>
+</main>
+
+</body>
+</html>
