@@ -38,17 +38,18 @@ MOKA.packs = [
   },
   {
     id: "plage", univers: "plage", nom: "Moka à la plage",
-    age: "2-4", prix: 199, format: "pack", nbPlanches: 6, doudou: false,
+    age: "2-4", prix: 199, format: "pack", nbPlanches: 5, doudou: true,
     badge: null, tags: ["tout-petits"],
-    resume: "Pack de 6 coloriages à imprimer. Pelle, seau et château de sable : Moka passe la journée au bord de la mer.",
+    resume: "Pack de 5 coloriages à imprimer. Moka construit un château de sable, savoure une glace, joue dans les vagues avec sa bouée, part en barque et lit sous le parasol.",
     histoire: "Pelle, seau et château de sable : la mer n'a qu'à bien se tenir.",
     planches: [
       { titre: "Le château de sable", img: "plage-chateau.png" },
-      { titre: "Planche 2", img: null }, { titre: "Planche 3", img: null },
-      { titre: "Planche 4", img: null }, { titre: "Planche 5", img: null },
-      { titre: "Planche 6", img: null }
+      { titre: "La glace sur le banc", img: "plage-glace.png" },
+      { titre: "La bouée dans les vagues", img: "plage-bouee.png" },
+      { titre: "La promenade en barque", img: "plage-barque.png" },
+      { titre: "La lecture sous le parasol", img: "plage-parasol.png" }
     ],
-    cachettes: "dans le seau, derrière le château, sous la serviette"
+    cachettes: "dans le seau, derrière le banc, sur la vague, au bout de la barque, près de la crème solaire"
   },
   {
     id: "foret", univers: "foret", nom: "Moka à la forêt",

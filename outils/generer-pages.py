@@ -171,7 +171,7 @@ accueil = f'''
     <div class="row mt-32"><a class="btn" href="coloriages.html">Voir les coloriages</a><a class="btn btn-jaune" href="mode-enfant.html">Mode enfant</a></div>
     <div class="hero-atouts"><span>{IC["print"]} Imprimable à l'infini</span><span>{IC["pencil"]} Traits adaptés à chaque âge</span><span>{IC["lapin"]} Un doudou caché à trouver</span></div>
   </div>
-  <div class="eventail" aria-hidden="true">{eventail}</div>
+  <div class="eventail" data-anim="scroll" aria-hidden="true">{eventail}</div>
 </div></section>
 
 <section class="section"><div class="wrap">
@@ -262,7 +262,7 @@ accueil = f'''
   <p class="centre mt-24"><a class="lien" href="faq.html">Toutes les questions</a></p>
 </div></section>
 '''
-page("index.html", "Moka Coloriages · Coloriages à imprimer pour les 2 à 8 ans", "Des cahiers de coloriages en PDF à imprimer chez vous, avec Moka le petit ourson. Pensés pour chaque âge, de 2 à 8 ans. Sans pub, sans traceur.", accueil, actif="accueil", bandeau=True, page_id="accueil")
+page("index.html", "Moka Coloriages · Coloriages à imprimer pour les 2 à 8 ans", "Des cahiers de coloriages en PDF à imprimer chez vous, avec Moka le petit ourson. Pensés pour chaque âge, de 2 à 8 ans. Sans pub, sans traceur.", accueil, actif="accueil", bandeau=True, page_id="accueil", scripts=("app.js", "eventail.js"))
 
 # =========================================================
 # LES COLORIAGES
@@ -284,16 +284,12 @@ coloriages = f'''
       <button class="filtre" type="button" data-f="age" data-v="4-6" aria-pressed="false">4–6 ans</button>
       <button class="filtre" type="button" data-f="age" data-v="6-8" aria-pressed="false">6–8 ans</button></div></div>
     <div class="filtres-ligne"><span>Univers</span><div class="row">{f_univ}</div></div>
-    <div class="filtres-ligne"><span>Format</span><div class="row">
-      <button class="filtre" type="button" data-f="format" data-v="pack" aria-pressed="false">Pack</button>
-      <button class="filtre" type="button" data-f="format" data-v="unite" aria-pressed="false">À l'unité</button>
-      <button class="filtre" type="button" data-f="format" data-v="coffret" aria-pressed="false">Coffret</button></div></div>
   </div>
   <div class="grid-4 mt-32" id="catalogue">{catalogue}</div>
   <div class="vide-resultat" id="aucun" hidden><img src="assets/img/moka-coucou.png" alt="" style="width:120px;margin:0 auto 16px"><p class="h3">Aucun cahier avec ces filtres.</p><button class="btn btn-sec mt-16" type="button" id="reinit">Tout afficher</button></div>
 </div>
 <div class="section"></div>'''
-page("coloriages.html", "Les coloriages", "Tous les cahiers de coloriages Moka à imprimer : montagne, plage, forêt, ferme, école, Noël, espace, docteur. Filtrez par âge, univers et format.", coloriages, actif="coloriages", page_id="coloriages")
+page("coloriages.html", "Les coloriages", "Tous les cahiers de coloriages Moka à imprimer : montagne, plage, forêt, ferme, école, Noël, espace, docteur. Filtrez par âge et par univers.", coloriages, actif="coloriages", page_id="coloriages")
 
 # =========================================================
 # FICHES PACK
@@ -332,7 +328,7 @@ def fiche(p):
         n = p["nbPlanches"]
         bloc_planches = f'''<section class="section"><div class="wrap"><div class="between titre-section"><h2>{"La planche" if n == 1 else f"Les {n} planches du pack"}</h2><span class="small douce">Touchez une planche pour la voir en grand</span></div>
           <div class="planches">{tuiles}</div></div></section>'''
-    doudou = f'''<section class="section" style="padding-top:0"><div class="wrap"><div class="doudou-bloc bg-{p["univers"]}">{DOUDOU}<div><h2 class="h3">Retrouve le doudou de Moka !</h2><p class="mt-8">Dans chaque planche, le petit lapin s'est caché : {e(p["cachettes"])}. On le cherche avant de colorier.</p></div></div></div></section>''' if p["doudou"] else ""
+    doudou = f'''<section class="section" style="padding-top:0"><div class="wrap"><div class="doudou-bloc bg-{p["univers"]}"><img class="doudou-img" src="assets/img/doudou.png" alt="Le doudou lapin de Moka" width="351" height="600"><div><h2 class="h3">Retrouve le doudou de Moka !</h2><p class="mt-8">Dans chaque planche, le petit lapin s'est caché : {e(p["cachettes"])}. On le cherche avant de colorier.</p></div></div></div></section>''' if p["doudou"] else ""
     autres = [q for q in PACKS if q["id"] not in (pid, "coffret")]
     autres.sort(key=lambda q: (q["age"] != p["age"], q["id"]))
     reco = "".join(carte(q, nom_tag="h3") for q in autres[:4])
@@ -419,8 +415,8 @@ monde = f'''
 </div></section>
 
 <section class="chapitre"><div class="wrap duo" style="grid-template-columns:auto 1fr">
-  <div class="rond-doudou">{DOUDOU}</div>
-  <div><p class="overline">Chapitre 3</p><h2 class="mt-8">Le doudou, son fidèle compagnon</h2><p class="body-l douce mt-16">Où que Moka aille, son doudou n'est jamais loin. Il dort avec lui, part en voyage avec lui et le rassure quand quelque chose est nouveau. Dans les cahiers, il se cache : à vous de le trouver avant de colorier.</p></div>
+  <div class="rond-doudou"><img src="assets/img/doudou.png" alt="Le doudou lapin de Moka" width="351" height="600"></div>
+  <div><p class="overline">Chapitre 3</p><h2 class="mt-8">Le doudou, son fidèle compagnon</h2><p class="body-l douce mt-16">Où que Moka aille, son doudou n'est jamais loin. Il dort avec lui, part en voyage avec lui et le rassure quand quelque chose est nouveau. Dans les packs, il se cache : à vous de le trouver avant de colorier.</p></div>
 </div></section>
 
 <section class="chapitre bg-noir"><div class="wrap">

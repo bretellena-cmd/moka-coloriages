@@ -312,7 +312,7 @@
           && (!etat.tag || c.getAttribute("data-tags").indexOf(etat.tag) > -1);
         c.hidden = !ok; if (ok) n++;
       });
-      $("#nb-cahiers").textContent = n + (n > 1 ? " cahiers" : " cahier");
+      var nb = $("#nb-cahiers"); if (nb) nb.textContent = n + (n > 1 ? " cahiers" : " cahier");
       $("#aucun").hidden = n > 0;
       $$("[data-f]").forEach(function (b) { var k = b.getAttribute("data-f"), v = b.getAttribute("data-v"); b.setAttribute("aria-pressed", etat[k] === v ? "true" : "false"); });
     }

@@ -9,7 +9,7 @@ export const CATALOGUE = {
   "plage": {
     "nom": "Moka à la plage",
     "prix": 199,
-    "planches": 6
+    "planches": 5
   },
   "foret": {
     "nom": "Moka à la forêt",
