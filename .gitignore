@@ -6,3 +6,6 @@ node_modules/
 
 # PDF payants : ils vont dans le stockage privé Supabase, jamais sur GitHub
 pdf-prives/
+
+# Dessins originaux sans filigrane : ils restent sur l'ordinateur, jamais sur GitHub
+originaux/
