@@ -37,17 +37,26 @@
       f.style.zIndex = v > 90 ? 100 + i : 100 + N - i;
       f.children[0].lastElementChild.style.opacity = v < 90 ? (sn * .85).toFixed(3) : 0;
       f.children[1].lastElementChild.style.opacity = v >= 90 ? (sn * .85).toFixed(3) : 0;
+      // on cache vraiment la face qui est de dos : sinon Safari laisse voir certaines images en miroir à travers la page
+      f.children[0].style.visibility = v > 90 ? "hidden" : "";
+      f.children[1].style.visibility = v < 90 ? "hidden" : "";
     }
     var ouvert = Math.min(1, etats[0].v / 180);
     pousse(dec, -0.25 * (1 - ouvert), 120, 20, dt); pousse(ech, 0.9 + 0.1 * ouvert, 120, 20, dt);
     glisse.style.transform = "translateX(" + (dec.v * 100).toFixed(3) + "%) scale(" + ech.v.toFixed(4) + ")";
     reliure.style.opacity = ouvert > .5 ? 1 : 0;
     if (nav) { nav.style.opacity = Math.max(0, ouvert * 2 - 1).toFixed(3); nav.style.pointerEvents = ouvert > .9 ? "auto" : "none"; }
-    var s2 = 0; while (s2 < N && etats[s2].v > 160) s2++;
+    histoire.classList.toggle("livre-ouvert", etats[0].v > 2);
+    var s2 = 0; while (s2 < N && etats[s2].v > 100) s2++;
+    // pages à afficher : la double page ouverte, plus celle qui se découvre pendant qu'une feuille tourne
+    var aVoir = [];
+    if (s2 > 0) aVoir.push(feuilles[s2 - 1].children[1]);
+    if (s2 < N) aVoir.push(feuilles[s2].children[0]);
+    if (s2 < N && etats[s2].v > 2) { aVoir.push(feuilles[s2].children[1]); if (s2 + 1 < N) aVoir.push(feuilles[s2 + 1].children[0]); }
+    if (s2 > 0 && etats[s2 - 1].v < 178) { aVoir.push(feuilles[s2 - 1].children[0]); if (s2 - 2 >= 0) aVoir.push(feuilles[s2 - 2].children[1]); }
+    histoire.querySelectorAll(".face.visible").forEach(function (x) { if (aVoir.indexOf(x) < 0) x.classList.remove("visible"); });
+    aVoir.forEach(function (x) { x.classList.add("visible"); });
     if (s2 !== vu) {
-      histoire.querySelectorAll(".face.visible").forEach(function (x) { x.classList.remove("visible"); });
-      if (s2 > 0) feuilles[s2 - 1].children[1].classList.add("visible");
-      if (s2 < N) feuilles[s2].children[0].classList.add("visible");
       // seules les pages visibles restent atteignables au clavier
       feuilles.forEach(function (f, i) {
         f.children[0].inert = !(i === s2);
@@ -82,10 +91,10 @@
     if (!actif) return; actif = false;
     cancelAnimationFrame(raf);
     window.removeEventListener("scroll", lire); window.removeEventListener("resize", hauteurHeader);
-    histoire.classList.remove("livre-js");
+    histoire.classList.remove("livre-js", "livre-ouvert");
     feuilles.forEach(function (f) {
       f.style.transform = f.style.zIndex = "";
-      [].forEach.call(f.children, function (c) { c.inert = false; c.classList.remove("visible"); if (c.lastElementChild) c.lastElementChild.style.opacity = ""; });
+      [].forEach.call(f.children, function (c) { c.inert = false; c.style.visibility = ""; c.classList.remove("visible"); if (c.lastElementChild) c.lastElementChild.style.opacity = ""; });
     });
     glisse.style.transform = reliure.style.opacity = "";
   }

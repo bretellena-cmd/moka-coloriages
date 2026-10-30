@@ -749,9 +749,11 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: none; }
 .histoire .etape-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
 
 /* Chapitre 3 : doudou */
-.histoire .ldoudou { align-self: center; width: 60cqw; aspect-ratio: 1; border-radius: 50%; background: var(--rose); border: 3px solid var(--encre);
-  display: grid; place-items: end center; overflow: hidden; margin-top: 3cqh; flex: none; }
-.histoire .ldoudou img { height: 92%; width: auto; transform-origin: 50% 100%; }
+/* le doudou en entier, bien à l'intérieur du cercle rose */
+.histoire .ldoudou { position: relative; align-self: center; width: 60cqw; aspect-ratio: 1; margin-top: 3cqh; flex: none;
+  border-radius: 50%; background: var(--rose); border: 3px solid var(--encre); overflow: hidden; }
+.histoire .ldoudou img { position: absolute; left: 50%; bottom: 8%; height: 78%; width: auto; max-width: none;
+  translate: -50% 0; transform-origin: 50% 100%; }
 .histoire .visible .ldoudou img { animation: livre-coucou 2.6s ease-in-out .6s infinite; }
 @keyframes livre-coucou { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(-6deg); } 40% { transform: rotate(5deg); } 60% { transform: rotate(0); } }
 
@@ -784,6 +786,8 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: none; }
 .livre-js .feuille { display: block; position: absolute; inset: 0; transform-origin: left center; transform-style: preserve-3d; }
 .livre-js .face { position: absolute; inset: 0; width: auto; aspect-ratio: auto; border: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .livre-js .face:has(.ldos) { display: block; }
+.livre-js .face, .livre-js .face * { -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.livre-ouvert .lcouv-moka img { animation: none; }
 .livre-js .recto { border-radius: 3px 16px 16px 3px; } .livre-js .verso { transform: rotateY(180deg); border-radius: 16px 3px 3px 16px; }
 .livre-js .lcouv { border: 3px solid var(--encre); } .livre-js .ldos { border: 3px solid var(--encre); border-radius: inherit; }
 .livre-js .ombre { display: block; position: absolute; inset: 0; pointer-events: none; opacity: 0; z-index: 5; }
